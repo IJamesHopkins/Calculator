@@ -1,0 +1,33 @@
+body {
+    background-color: hotpink;
+}
+.container {
+    display:grid;
+    grid-template-rows: 600px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: ". . . . calculator calculator calculator calculator . . . .";
+    width: 100%;
+}
+.calculator {
+    grid-area: calculator;
+    display: grid;
+    background-color: grey;
+    grid-template-rows: 200px 400px;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+                    "screen"
+                    "buttons";
+    border-radius: 3px;
+
+}
+
+.screen {
+    grid-area: screen;
+    background-color: indigo;
+}
+
+.buttons {
+    grid-area: buttons;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -3,7 +3,7 @@ body {
 }
 .container {
     display:grid;
-    grid-template-rows: 600px;
+    grid-template-rows: 500px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: ". . . . calculator calculator calculator calculator . . . .";
     width: 100%;
@@ -12,7 +12,7 @@ body {
     grid-area: calculator;
     display: grid;
     background-color: grey;
-    grid-template-rows: 200px 400px;
+    grid-template-rows: 100px 400px;
     grid-template-columns: 100%;
     grid-template-areas: 
                     "screen"
@@ -23,11 +23,115 @@ body {
 
 .screen {
     grid-area: screen;
-    background-color: indigo;
+    background-color: rgb(54, 54, 54);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+                "current"
+                "previous";
+    justify-items: center;
+    align-items: center;
+}
+.screen .current {
+    width: 80%;
+    height: 30px;
+    background-color:white;
+    grid-area: current;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.screen .previous {
+    width: 80%;
+    height: 20px;
+    background-color: white;
+    grid-area: previous;
+    text-align: right;
+    border-radius: 30px;
+    font-size: 12px;
 }
 
 .buttons {
     grid-area: buttons;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+                "clear clear backspace add"
+                "one two three subtract"
+                "four five six multiply"
+                "seven eight nine divide"
+                "zero decimal equal equal";
+}
+
+.number {
+    background-color: black;
+    color: white;
+}
+
+button {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 100px;
+}
+
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.zero{
+    grid-area: zero;
+}
+.add{
+    grid-area: add;
+}
+.subtract{
+    grid-area: subtract;
+}
+.multiply{
+    grid-area: multiply;
+}
+.divide{
+    grid-area: divide;
+}
+.equal {
+    grid-area: equal;
+    width: 90%;
+}
+.decimal{
+    grid-area: decimal;
+}
+.backspace{
+    grid-area: backspace;
+}
+.clear{
+    grid-area: clear;
+    width: 90%;
 }
